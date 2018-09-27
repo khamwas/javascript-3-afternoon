@@ -53,16 +53,10 @@ var employees = [
 function employeeUpdater(){
   newEmployees =
   employees.filter(function(element){
-    if(element.firstName === "Theo"){
-    return false;}
-    else if(element.firstName==="Lorie"){
-      element.department="HR";
-      return true
-    }else{
-      return true
-    }}
-    );return newEmployees
-  }//Code Here
+   !(element.firstName === "Theo");
+     element.firstName==="Lorie" ? element.department = "HR" : element;
+  });return newEmployees
+  }//Code Here 
 
 
 
